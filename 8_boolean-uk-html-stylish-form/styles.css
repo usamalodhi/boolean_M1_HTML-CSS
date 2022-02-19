@@ -1,0 +1,193 @@
+/* css custom properties */
+:root {
+  --clr-grad-1: #58aedf;
+  --clr-grad-2: #b743f0;
+  --color-text: rgb(50, 50, 50);
+}
+
+/* css reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* line-height: 1, 5em; */
+}
+
+/* typography */
+label,
+input,
+textarea,
+button,
+small,
+h1 {
+  font-family: "Nunito", sans-serif, Helvetica;
+}
+
+h1 {
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+/* change typography of  placeholder text and option text*/
+
+/* colors */
+form {
+  background-color: white;
+  display: inline-block;
+}
+
+label {
+  color: grey;
+}
+
+/* color  */
+body {
+  background: -webkit-linear-gradient(
+    left top,
+    var(--clr-grad-1),
+    var(--clr-grad-2)
+  );
+}
+
+/* layout */
+body {
+  display: flex;
+}
+
+.form textarea {
+  display: block;
+}
+
+form {
+  display: inline-block;
+}
+
+form {
+  /* center in screen exactly */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* other */
+  padding: 2em;
+  border: 0px solid white;
+  border-radius: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+input,
+textarea {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid grey;
+}
+
+/* submit button */
+.button-container {
+  text-align: center;
+}
+
+button {
+  /* layout */
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 25px;
+  border: none;
+  padding-left: 2em;
+  padding-right: 2em;
+  /* color */
+  color: white;
+  background: -webkit-linear-gradient(
+    right,
+    var(--clr-grad-1),
+    var(--clr-grad-2)
+  );
+}
+
+/* detailed form styling */
+label {
+  font-size: 1em;
+}
+
+input {
+  line-height: 3em;
+  font-size: 1.2em;
+}
+
+select {
+  /* border */
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid grey;
+  /* margin */
+  margin-top: 1em;
+  /* font */
+  font-weight: bold;
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+}
+
+.form__field:nth-child(4) {
+  margin-top: 2em;
+}
+
+/* JS specific */
+.form-render.success input {
+  border-color: #2ecc71;
+}
+
+.form-render.error input {
+  border-color: #e74c3c;
+}
+
+.form i {
+  visibility: hidden;
+}
+
+.form-render.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-render.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form small {
+  color: #e74c3c;
+  visibility: hidden;
+}
+
+.form-render.error small {
+  visibility: visible;
+}
+
+/* bug fixes */
+/* linear gradient will not display without empty test div*/
+#test {
+  opacity: 0;
+}
+/* remove blue background after entering name and e-mail */
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* fa right icon visible in submit button */
+.fas.fa-arrow-right {
+  visibility: visible;
+  color: white;
+}
