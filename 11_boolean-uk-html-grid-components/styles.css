@@ -1,0 +1,69 @@
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 0.4fr 1.6fr;
+  gap: 0px 10px;
+  grid-template-areas: ". .";
+}
+
+/* Grid within Grid #1 */
+.box.box-A {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 10px;
+  grid-template-areas: ". . .";
+}
+
+/* Grid within Grid #1 */
+.box.box-B {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0px 10px;
+  grid-template-areas: ". . . . .";
+}
+
+.three-column-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 10px;
+  grid-template-areas: ". . .";
+}
+
+/* Grid within Grid #2 */
+.three-column-grid-b {
+  display: grid;
+  grid-template-columns: 0.1fr 0.7fr 0.2fr;
+  gap: 0px 10px;
+  grid-template-areas: ". . .";
+}
+
+/* Grid within Grid #2 */
+.box.final {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 10px;
+  grid-template-areas: ". . .";
+}
+
+/* Grid within Grid #2 */
+
+.three-column-grid__expand-two {
+  display: grid;
+  grid-template-columns: 0.2fr 2.6fr 0.2fr;
+  gap: 0px 5px;
+  grid-template-areas: ". . .";
+}
+
+.five-column-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0px 10px;
+  grid-template-areas: ". . .";
+}
+
+.center-grid {
+  display: grid;
+  grid-template-columns: 0.4fr;
+  gap: 0px 0px;
+  grid-template-areas: ". .";
+  justify-content: center;
+}
