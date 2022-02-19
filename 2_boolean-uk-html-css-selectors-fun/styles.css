@@ -1,0 +1,90 @@
+/* CSS Custom Properties */
+
+:root {
+  /* fonts */
+  --font-1: 28px;
+  --font-2: 12px;
+  --font-3: 15px;
+  --font-4: 10px;
+
+  /* colors */
+  --first-color: orange;
+  --second-color: green;
+  --third-color: red;
+  --fourth-color: pink;
+  --fifth-color: blue;
+  --sixth-color: black;
+  --seventh-color: purple;
+  --eighth-color: grey;
+
+  /* left-margin */
+  --left-margin-1: 10px;
+
+  /* border-bottom */
+  --border-bottom-1: 1px solid black;
+  --border-bottom-2: 2px solid black;
+}
+
+p {
+  font-size: var(--font-1);
+  color: var(--first-color);
+}
+
+.paragraph {
+  font-size: var(--font-1);
+  color: var(--second-color);
+}
+
+#paragraph {
+  font-size: var(--font-1);
+  color: var(--third-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--fourth-color);
+}
+
+.container-one,
+.container-two {
+  font-size: var(--font-1);
+}
+
+.container-one p {
+  font-size: var(--font-2);
+  color: var(--fifth-color);
+  margin-left: var(--left-margin-1);
+  border-bottom: var(--border-bottom-2);
+}
+
+.container-two p {
+  font-size: var(--font-3);
+  color: var(--seventh-color);
+  margin-left: var(--left-margin-1);
+  border-bottom: var(--border-bottom-1);
+}
+
+.container-two p span {
+  font-size: var(--font-2);
+  color: var(--eighth-color);
+}
+
+.container-one.container-two p {
+  font-size: var(--font-4);
+  color: var(--seventh-color);
+  margin-left: var(--left-margin-1);
+  border-bottom: var(--border-bottom-1);
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+section.container-one.container-two p,
+section.container-one.container-two span {
+  font-size: var(--font-1);
+  color: var(--first-color);
+  border-bottom: none;
+  text-transform: none;
+  font-weight: normal;
+}
