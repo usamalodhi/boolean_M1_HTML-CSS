@@ -1,0 +1,661 @@
+/* css reset */
+body,
+body::before,
+body::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* css custom properties */
+:root {
+  /* typography */
+  /* -----font-family */
+  --font-family-text: Montserrat;
+  /* -----font-properties */
+  --font-size-big: 1.5rem;
+  --font-size-default: 1rem;
+  --font-size-small-one: 0.875rem;
+  --font-size-small-two: 0.8125rem;
+  /* color */
+  /* -----background */
+  --clr-body-background: #000000;
+  --clr-cta-background: rgba(0, 0, 0, 0.4);
+  /* -----text */
+  --clr-text-white: #ffffff;
+  --clr-section-bg: #141922;
+  --clr-nav-text: rgba(225, 225, 225, 0.4);
+  /* layout */
+  /* -----borders */
+  --bdr-rmv-style-1: 0.1em solid red;
+  --bdr-style-1: 0.1em solid rgba(225, 225, 225, 0.4);
+  --bdr-style-2: 0.1em solid white;
+}
+
+/* -----global styles */
+a {
+  text-decoration: none;
+  color: var(--clr-nav-text);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.list.horizontal li {
+  display: inline;
+}
+
+.list.covers.horizontal li {
+  display: inline-block;
+}
+
+.container.covers {
+  display: inline-block;
+}
+
+.list.scrollY {
+  height: 150px;
+  overflow-y: scroll;
+}
+
+.main.scrollY {
+  overflow-y: scroll;
+}
+
+.hyphen--invis {
+  color: var(--clr-section-bg);
+}
+
+/* -----typography */
+body {
+  font-family: "Montserrat", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+.title {
+  font-size: var(--font-size-big);
+}
+
+.message {
+  font-size: var(--font-size-default);
+}
+
+.covers.text > p + p {
+  font-size: var(--font-size-samll-two);
+}
+.covers.text > p:nth-child(1) {
+  font-weight: bold;
+  margin-bottom: -0.5em;
+}
+
+/* -----color */
+body {
+  background-color: var(--clr-body-background);
+  color: var(--clr-nav-text);
+}
+
+.main {
+  background-color: var(--clr-section-bg);
+}
+
+.text--white {
+  color: var(--clr-text-white);
+}
+
+.covers.text > p + p {
+  color: var(--clr-nav-text);
+}
+
+/* -----images & icons */
+
+/* ---images */
+
+/* media section images */
+#media__img {
+  height: 40px;
+  width: 40px;
+}
+
+/* sidebar nav images */
+.sidebar__img.logo {
+  width: 133px;
+  height: 40px;
+}
+
+.sidebar__img {
+  height: 26px;
+  width: 26px;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.user__profile {
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  border-radius: 50%;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.img__install {
+  width: 16px;
+  height: 16px;
+  margin-left: 0.5em;
+}
+
+.covers__img--cirlce {
+  border-radius: 50%;
+}
+
+.fas.fa-plus {
+  color: black;
+  background-color: var(--clr-nav-text);
+  font-size: 1.5em;
+  padding: 8px;
+}
+
+.user__name {
+  font-size: var(--font-size-small-one);
+  color: white;
+  font-weight: bold;
+}
+
+.install__text {
+  font-size: var(--font-size-small-two);
+  font-weight: bold;
+}
+
+/* -----overall layout */
+
+/* ---wrapper */
+.wrapper {
+  height: 100vh;
+  max-height: 100vh;
+  display: grid;
+  grid-template-columns: 0.2fr 1.8fr;
+  grid-template-rows: repeat(2, 0.4fr) 2.7fr 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "sidebar banner"
+    "sidebar menu"
+    "sidebar main"
+    "footer footer";
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.banner {
+  grid-area: banner;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+.main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* ---footer */
+.footer {
+  display: grid;
+  grid-template-columns: 0.3fr 1.7fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "one two three";
+  grid-area: footer;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+/* grid - footer */
+.media {
+  display: grid;
+  grid-template-columns: 0.6fr 1.6fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+
+  grid-template-areas: "playing controller settings";
+  grid-area: footer;
+}
+
+.media__playing {
+  grid-area: playing;
+}
+
+.media__controller {
+  grid-area: controller;
+}
+
+.media__settings {
+  grid-area: settings;
+}
+
+/* -----menu */
+.table {
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.list.horizontal li {
+  display: inline;
+  font-weight: bold;
+}
+
+.list__item.menu:nth-child(1),
+.list__item.menu + .list__item.menu {
+  margin-left: 1em;
+}
+
+.list.horizontal li a {
+  text-decoration: none;
+  color: var(--clr-nav-text);
+}
+
+.list.horizontal li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.active__highlight {
+  text-decoration: underline;
+  text-decoration-color: green;
+  text-decoration-thickness: 0.2em;
+}
+
+.menu {
+  background-color: var(--clr-section-bg);
+}
+
+/* -----banner */
+/* buttons */
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.banner > .box {
+  margin-top: 2em;
+  margin-right: 1em;
+}
+
+.btn {
+  border: var(--bdr-style-2);
+  border-radius: 25px;
+  padding: 10px 50px 10px 50px;
+  color: white;
+  float: right;
+  margin-bottom: 1.6em;
+}
+
+/* -----media section */
+
+/* ---media playing */
+.media__playing {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.media__playing__textbox {
+  text-align: center;
+}
+
+.list__item--mediaTitle {
+  font-size: 0.8rem;
+}
+
+.list__item--mediaTitleSmall {
+  font-size: 0.6rem;
+}
+
+.list__item--mediaTitle {
+  color: white;
+  font-weight: bold;
+}
+
+.progress {
+  margin: 20px auto;
+  padding: 0;
+  width: 80%;
+  height: 5px;
+  overflow: hidden;
+  background: #e5e5e5;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.progressContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.bar {
+  height: 100%;
+  background: grey;
+  width: 45%;
+}
+.bar:hover {
+  background: green;
+}
+#timeElapsed,
+#timeTotal {
+  color: white;
+}
+
+.media__controller {
+  text-align: center;
+}
+
+#settingsIconsList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-content: flex-end;
+  border: 1px solid pink;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#mediaIconsList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fas,
+.far {
+  color: white;
+}
+
+.fas:hover,
+.far:hover {
+  color: green;
+}
+
+.slider.time {
+  width: 60%;
+}
+
+.slider.volume {
+  width: 60%;
+}
+
+/* media icon sizes */
+.largeMediaIcon {
+  font-size: 32px;
+}
+
+.smallMediaIcon {
+  font-size: 16px;
+}
+
+.media__settings {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fas.fa-volume-up,
+.fas.fa-desktop {
+  margin-left: 0.5em;
+}
+
+footer {
+  background-color: rgba(128, 128, 128, 0.411);
+}
+
+/* -----sidebar nav */
+/* flex - sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__bottom {
+  margin-top: auto;
+}
+
+.nav__logo {
+  margin-top: 0.5em;
+}
+
+.playlist__text,
+.list__item.playlist {
+  font-size: var(--font-size-small-one);
+}
+
+.install__text {
+  margin-left: 0.5em;
+}
+
+/* -----main */
+.main {
+  padding-bottom: 1em;
+  padding-left: 1em;
+}
+
+.section__title {
+  color: white;
+}
+
+/* covers images container and image dimensions */
+.covers.container {
+  width: 200px;
+  height: 150px;
+}
+
+.covers.image {
+  width: 150px;
+  height: 150px;
+}
+
+.covers.image.circle {
+  border-radius: 50%;
+}
+
+.covers.container {
+  position: relative;
+}
+
+.covers.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: 0.5s ease;
+}
+
+.middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.covers.container:hover .covers.image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.far.fa-play-circle.overlay {
+  font-size: 5em;
+}
+
+.covers.text {
+  text-align: center;
+}
+
+.covers.text > p:nth-child(1) {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.covers.text > p:nth-child(2) {
+  color: var(--clr-nav-text);
+  font-size: 14px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.nav__install {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+  border-bottom: 1px solid grey;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+/* -----misc */
+
+/* additional hover effects */
+a:hover {
+  color: white;
+}
+
+/* write here */
+
+/* ---styling scrollbars */
+
+/* webkit for Chrome, Edge, Safari */
+.list.scrollY::-webkit-scrollbar {
+  width: 0.5em; /* width of the entire scrollbar */
+}
+
+.list.scrollY::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 25px solid green;
+}
+
+/* scrollbar-width and scrollbar-color for FireFox */
+.list.scrollY {
+  scrollbar-width: thin;
+  scrollbar-color: green green;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  opacity: 0;
+  cursor: pointer;
+  background-color: green;
+}
+
+/* -----sticky side top and footer but main scrolls */
+
+.main {
+  overflow-y: scroll;
+}
+
+/* webkit for Chrome, Edge, Safari */
+.main::-webkit-scrollbar {
+  width: 0.5em; /* width of the entire scrollbar */
+}
+
+.main::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  border: 25px solid green;
+}
+
+/* scrollbar-width and scrollbar-color for FireFox */
+.main {
+  scrollbar-width: thin;
+  scrollbar-color: green green;
+}
+
+/* ----- */
+
+/* -----styling scrollbars */
+
+/* -----media queries */
+@media screen and (max-width: 600px) {
+  .sidebar__text,
+  .nav__playlist,
+  .user__name,
+  .install__text {
+    display: none;
+  }
+
+  .sidebar__img.logo {
+    margin: 0 auto;
+  }
+
+  #nav__icon-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em 0em;
+  }
+
+  .img__install {
+    margin: 0 auto;
+  }
+
+  .nav__install {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav__bottom {
+    align-items: center;
+  }
+}

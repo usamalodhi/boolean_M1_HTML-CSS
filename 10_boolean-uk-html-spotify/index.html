@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify New</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="http://fonts.googleapis.com/css?family=Montserrat"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/75e02ba484.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav class="sidebar sidebar__nav">
+        <section class="nav__top">
+          <!-- logo -->
+          <div class="nav__logo">
+            <picture>
+              <source
+                srcset="./assets/img/logo.svg"
+                media="(min-width: 601px)"
+              />
+              <img class="sidebar__img logo" src="./assets/img/logo-small.svg" alt="spotify logo" /> 
+            </picture>
+          </div>
+          <!-- main menu -->
+          <section class="nav__icons">
+            <ul id="nav__icon-list"  class="list">
+              <li  class="list__item active">
+                <a class="list__link nav" href="#">
+                  <img  class="sidebar__img" src="./assets/img/home.svg" alt="home" /><span class="sidebar__text"
+                    >Home</span
+                  ></a
+                >
+              </li>
+              <li class="list__item">
+                <a class="list__link nav" href="#">
+                  <img class="sidebar__img" src="./assets/img/search.svg" alt="cerca" /><span class="sidebar__text"
+                    >Cerca</span
+                  ></a
+                >
+              </li>
+              <li class="list__item">
+                <a class="list__link nav" href="#">
+                  <img class="sidebar__img"
+                    src="./assets/img/libreria.svg"
+                    alt="la tua libreria"
+                  /><span class="sidebar__text">La tua libreria</span></a 
+                >
+              </li>
+            </ul>
+          </section>
+          <!-- nav__playlist -->
+          <section class="nav__playlist">
+            <h1>PLAYLIST</h1>
+            <a  href="#" class="nav__playlist-add"
+              > <i class="fas fa-plus"></i> <span class="playlist__text">Crea Playlist</span></a
+            >
+            <ul class="list scrollY">
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+              <li class="list__item playlist"><a href="#">Name Playlist</a></li>
+            </ul>
+          </section>
+        </section>
+        <!-- nav__bottom -->
+        <section class="nav__bottom">
+          <div class="nav__install">
+            <a href="#"
+              ><img
+                class="img__install"
+                src="./assets/img/download.svg"
+                alt="installa app"
+              /><span class="install__text">Installa app</span></a
+            >
+            <div class="border one"></div>
+          </div>
+          <div class="user">
+            <img  class="user__profile" src="./assets/img/profile.svg" alt="profile" /> <span class="user__name">John Doe</span>
+          </div>
+        </section>
+      </nav>
+    <!-- cta banner -->
+        <section class="banner">
+          <div class="box">
+            <a href="#" class="btn">UPGRADE</a>
+          </div>
+        </section>
+      <header class="menu">
+        <nav class="menu__nav table">
+          <ul class="list horizontal">
+            <li class="list__item menu">
+              <a href="#">IN E<span class="active__highlight">VIDE</span>NZA</a>
+            </li>
+            <li class="list__item menu"><a href="#">PODCAST</a></li>
+            <li class="list__item menu"><a href="#">CLASSIFICHE</a></li>
+            <li class="list__item menu"><a href="#">GENERI<span class="hyphen--invis">&#8209</span>E<span class="hyphen--invis">&#8209</span>MOOD</a></li>
+            <li class="list__item menu"><a href="#">NUOVE<span class="hyphen--invis">&#8209</span>USCITE</a></li>
+            <li class="list__item menu"><a href="#">SCOPRI</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main col">
+          <h2 class="section__title">Recently Played</h2>
+        <section class="recentlyPlayed row">
+          <div class="covers flexchild"> 
+          <!-- Recently Played -->
+        <div class="covers container">
+          <img src="./assets/img/metal_lifting.jpg" alt="heavy metal" class="covers image">
+          <div class="middle">
+            <div class="overlayIcon">
+              <i class="far fa-play-circle overlay"></i>
+            </div>
+          </div>
+            <div class="covers text">
+              <p>Heavy Metal</p>
+              <p>Subtitle</p>
+            </div>
+        </div>
+      </div>
+      <div class="flexchild">
+        <div class="covers container">
+          <img src="./assets/img/stranger.jpeg" alt="stranger things volume one" class="covers image">
+          <div class="middle">
+            <div class="overlayIcon">
+              <i class="far fa-play-circle overlay"></i>
+            </div>
+          </div>
+            <div class="covers text">
+              <p>Stranger Things Vol.1 (a Netflix Original Series Soundtrack</p>
+              <p>Kyle Dixon & Michael Stein</p>
+            </div>
+        </div>
+      </div>
+      <div class="flexchild">
+        <div class="covers container">
+          <img src="./assets/img/aquietplace.jpeg" alt="a quiet place" class="covers image">
+          <div class="middle">
+            <div class="overlayIcon">
+              <i class="far fa-play-circle overlay"></i>
+            </div>
+          </div>
+            <div class="covers text">
+              <p>A Quiet Place</p>
+              <p>Subtitle</p>
+            </div>
+        </div>
+      </div>
+      <div class="flexchild">
+        <div class="covers container">
+          <img src="./assets/img/split.jpeg" alt="split" class="covers image">
+          <div class="middle">
+            <div class="overlayIcon">
+              <i class="far fa-play-circle overlay"></i>
+            </div>
+          </div>
+            <div class="covers text">
+              <p>Split</p>
+              <p>Subtitle</p>
+            </div>
+        </div>
+      </div>
+      <div class="flexchild">
+        <div class="covers container">
+          <img src="./assets/img/cure.jpeg" alt="a cure for wellness" class="covers image">
+          <div class="middle">
+            <div class="overlayIcon">
+              <i class="far fa-play-circle overlay"></i>
+            </div>
+          </div>
+            <div class="covers text">
+              <p>A Cure For Wellness</p>
+              <p>Subtitle</p>
+            </div>
+        </div>
+      </div>
+      <div class="flexchild">
+        <div class="covers container">
+          <img src="./assets/img/sinister.jpeg" alt="sinister" class="covers image">
+          <div class="middle">
+            <div class="overlayIcon">
+              <i class="far fa-play-circle overlay"></i>
+            </div>
+          </div>
+            <div class="covers text">
+              <p>A Cure For Wellness</p>
+              <p>Subtitle</p>
+            </div>
+        </div>
+      </div>
+      </section>
+      <header><h2 class="section__title">Creato per John Doe</h2>
+        <p class="message">Pi&#249 ascolti, pi&#249 accurati saranno i suggerimenti.</p></header>
+      <section class="createdFor row">
+         <!-- Created for John Doe -->
+         <div class="flexchild">
+      <div class="covers container">
+        <img src="./assets/img/radar.jpeg" alt="radar" class="covers image">
+        <div class="middle">
+          <div class="overlayIcon">
+            <i class="far fa-play-circle overlay"></i>
+          </div>
+        </div>
+          <div class="covers text">
+            <p>Radar</p>
+          </div>
+      </div>
+    </div>
+    <div class="flexchild">
+      <div class="covers container">
+        <img src="./assets/img/mixdaily.jpeg" alt="daily mix volume one" class="covers image">
+        <div class="middle">
+          <div class="overlayIcon">
+            <i class="far fa-play-circle overlay"></i>
+          </div>
+        </div>
+          <div class="covers text">
+            <p>Daily Mix 1</p>
+          </div>
+      </div>
+    </div>
+    </section>
+    <header><h2 class="section__title">Artisti pi&#249 popolari</h2>
+      <p class="message">Pi&#249 ascolti, pi&#249 accurati saranno i suggerimenti.</p></header>
+    <section class="popArtists row">
+      <div class="flexchild">
+      <!-- Popular Artists -->
+   <div class="covers container">
+     <img src="./assets/img/youg.jpeg" alt="young and beautiful" class="covers image circle">
+     <div class="middle">
+       <div class="overlayIcon">
+         <i class="far fa-play-circle overlay"></i>
+       </div>
+     </div>
+       <div class="covers text">
+         <p>Lana del Ray</p>
+       </div>
+   </div>
+  </div>
+  <div class="flexchild">
+   <div class="covers container">
+     <img src="./assets/img/einaudi.jpeg" alt="ludovico einaudi" class="covers image cirlce">
+     <div class="middle">
+       <div class="overlayIcon">
+         <i class="far fa-play-circle overlay"></i>
+       </div>
+     </div>
+       <div class="covers text">
+         <p>Ludovico Einaudi</p>
+       </div>
+   </div>
+  </div>
+ </section>
+    </main>
+      <footer class="media">
+        <div class="media__playing">
+          <div class="imagebox media__img">
+            <img
+              id="media__img"
+              src="./assets/img/sinister.jpeg"
+              alt="sinister"
+            />
+          </div>
+          <ul class="list">
+            <li class="list__item list__item--mediaTitle">Sinister</li>
+            <li class="list__item list__item--mediaTitleSmall">Song Name</li>
+          </ul>
+          <div class="media__icons">
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#"><i class="far fa-folder"></i></a>
+          </div>
+        </div>
+        <div class="media__controller">
+          <ul id="mediaIconsList" class="list horizontal">
+            <li class="list__item"><i class="fas fa-random smallMediaIcon"></i></li>
+            <li class="list__item"><i class="fas fa-step-backward smallMediaIcon"></i></li>
+            <li class="list__item"><i class="far fa-play-circle largeMediaIcon"></i></li>
+            <li class="list__item"><i class="fas fa-step-forward smallMediaIcon"></i></li>
+            <li class="list__item"><i class="fas fa-redo-alt smallMediaIcon"></i></li>
+          </ul>
+          <ul id="timeBar" class="list horizontal">
+              <li class="list__item"></li>
+          </ul>
+          <li><span id="timeElapsed">0:25</span><input type="range" min="1" max="1000" value="1000" class="slider time" id="myRange"><span id="timeTotal">4:25</span></li>
+        </div>
+        <div class="media__settings">
+          <div class="inline"><i class="fas fa-list-ul"></i></div>
+          <div  class="inline"><i class="fas fa-desktop"></i></div>
+          <div>
+            <span class="inline"><i class="fas fa-volume-up"></i></span>
+            <span  class="inline"><input id="settingsVolume" type="range" min="1" max="100" value="50" class="slider volume" id="myRange"></span>
+          </div>
+        </div>
+            </div>
+         </footer>
+    </div>
+  </body>
+</html>
