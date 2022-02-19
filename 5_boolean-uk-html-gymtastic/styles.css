@@ -1,0 +1,196 @@
+/* css custom properties */
+:root {
+  --light-blue-custom: #357ba6;
+  --instagram-color: #874bf4;
+  --facebook-color: #3578ea;
+  --youtube-color: #ea3223;
+  --membership-color: #e88132;
+  --header-font-size: 2rem;
+  --text-font-size: 1rem;
+  --text-font-color-1: white;
+  --shift-20px: 20px;
+  --shift-50px: 50px;
+  --border-styling: 2px solid #333333;
+  --border-radius-custom: 25px;
+}
+
+/* CSS reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  max-width: 100ch;
+  text-align: justify;
+}
+
+/*Navigation section*/
+
+/* Nav inline */
+.header .logo,
+.header .nav,
+.header ul,
+.header ul li {
+  display: inline-block;
+}
+
+/* Nav and footer color and fonts */
+.header,
+footer {
+  background-color: var(--light-blue-custom);
+}
+
+.header .logo {
+  font-size: var(--header-font-size);
+  color: var(--text-font-color-1);
+}
+
+.header ul,
+.footer ul {
+  list-style: none;
+  color: var(--text-font-color-1);
+}
+
+.header ul a {
+  text-decoration: none;
+  color: var(--text-font-color-1);
+}
+
+.header ul a:hover {
+  color: red;
+}
+
+a:hover {
+  color: green;
+}
+
+/* Nav spacing */
+.header {
+  padding: var(--shift-20px);
+}
+
+.header li {
+  margin-left: var(--shift-20px);
+}
+
+/* page layout */
+footer ul {
+  padding-left: var(--shift-20px);
+}
+
+h2 {
+  padding-top: var(--shift-20px);
+  padding-bottom: var(--shift-20px);
+  margin-left: var(--shift-50px);
+  color: var(--light-blue-custom);
+  font-size: 2rem;
+}
+
+footer {
+  margin-top: 300px;
+}
+
+p {
+  line-height: 1.6;
+  padding-left: var(--shift-50px);
+}
+
+#discount {
+  font-weight: bold;
+  color: var(--light-blue-custom);
+}
+
+.section__link {
+  padding-left: var(--shift-50px);
+}
+
+.section__link--membership {
+  display: inline-block;
+  color: var(--membership-color);
+  margin-top: var(--shift-20px);
+  margin-left: var(--shift-50px);
+  border: solid 2px var(--membership-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.section__link--instagram,
+.section__link--facebook,
+.section__link--youtube {
+  border: solid 1px black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-left: var(--shift-50px);
+  margin-right: -20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.section__link--instagram,
+.section__link--facebook,
+.section__link--youtube {
+  background-color: var(--instagram-color);
+}
+
+.section__link--facebook {
+  background-color: var(--facebook-color);
+}
+
+.section__link--youtube {
+  background-color: var(--youtube-color);
+}
+
+/* Testimonials */
+.cards {
+  margin-left: var(--shift-50px);
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 225px);
+  grid-auto-rows: auto;
+  gap: 20px;
+  font-family: sans-serif;
+  padding-top: 30px;
+}
+
+.cards * {
+  box-sizing: border-box;
+}
+
+.card {
+  position: relative;
+  border: var(--border-styling);
+  border-radius: var(--border-radius-custom);
+}
+
+.card__image-one {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: var(--border-radius-custom);
+  border-top-right-radius: var(--border-radius-custom);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card__content {
+  line-height: 1.5;
+  font-size: 0.9em;
+  background: #fafafa;
+  border-radius: 25px;
+  text-align: center;
+  padding-right: 40px;
+}
+
+#testimonials {
+  margin-top: var(--shift-20px);
+  margin-bottom: var(--shift-50px);
+}
