@@ -1,0 +1,184 @@
+/* css custom properties */
+:root {
+  --border-styling: 2px solid #333333;
+  --color-1: lightblue;
+  --color-2: rgb(226, 105, 105);
+  --color-3: rgb(231, 231, 97);
+  --color-4: pink;
+  --color-5: orange;
+  --color-6: rgb(189, 79, 189);
+  --color-7: grey;
+  --color-8: rgb(204, 162, 85);
+  --color-9: rgb(69, 202, 69);
+  /* heights */
+  --height-5rem: 5rem;
+  --height-10rem: 10rem;
+  --height-15rem: 15rem;
+  --height-20rem: 20rem;
+  /* item-gap */
+  --item-gap: 1em;
+}
+
+/* globally available */
+
+.nav {
+  border: var(--border-styling);
+  background-color: var(--color-1);
+}
+
+.user-post {
+  border: var(--border-styling);
+  background-color: var(--color-2);
+}
+
+.profile {
+  border: var(--border-styling);
+  background-color: var(--color-3);
+}
+
+.show-more {
+  border: var(--border-styling);
+  background-color: var(--color-4);
+}
+
+.friend-post-1 {
+  border: var(--border-styling);
+  background-color: var(--color-5);
+}
+
+.friend-post-2 {
+  border: var(--border-styling);
+  background-color: var(--color-6);
+}
+
+.friend-post-3 {
+  border: var(--border-styling);
+  background-color: var(--color-7);
+}
+
+.friend-post-4 {
+  border: var(--border-styling);
+  background-color: var(--color-8);
+}
+
+.friend-post-5 {
+  border: var(--border-styling);
+  background-color: var(--color-9);
+}
+
+.linkedin-news {
+  border: var(--border-styling);
+  background-color: var(--color-1);
+}
+
+@media only screen and (max-width: 764px) {
+  div {
+    margin-bottom: var(--item-gap);
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav {
+    height: 2rem;
+  }
+
+  .show-more,
+  .user-post {
+    height: var(--height-5rem);
+  }
+
+  .profile,
+  .friend-post-1,
+  .friend-post-2,
+  .friend-post-3,
+  .friend-post-4,
+  .friend-post-5 {
+    height: var(--height-15rem);
+  }
+
+  .linkedin-news {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 765px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    gap: 1em 1em;
+    height: 95vh;
+    grid-template-areas:
+      "nav nav nav nav"
+      "profile user-post user-post linkedin-news"
+      "profile friend-post-1 friend-post-1 linkedin-news"
+      "show-more friend-post-2 friend-post-2 linkedin-news"
+      "show-more friend-post-3 friend-post-3 linkedin-news"
+      ". friend-post-4 friend-post-4 ."
+      ". friend-post-5 friend-post-5 .";
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .user-post {
+    grid-area: user-post;
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+
+  .show-more {
+    grid-area: show-more;
+  }
+
+  .friend-post-1 {
+    grid-area: friend-post-1;
+  }
+
+  .friend-post-2 {
+    grid-area: friend-post-2;
+  }
+
+  .friend-post-3 {
+    grid-area: friend-post-3;
+  }
+
+  .friend-post-4 {
+    grid-area: friend-post-4;
+  }
+
+  .friend-post-5 {
+    grid-area: friend-post-5;
+  }
+
+  .linkedin-news {
+    grid-area: linkedin-news;
+  }
+
+  .nav {
+    height: 2rem;
+  }
+
+  .show-more {
+    margin-top: -5rem;
+  }
+
+  .user-post {
+    height: var(--height-5rem);
+  }
+
+  .linkedin-news,
+  .show-more,
+  .profile,
+  .friend-post-1,
+  .friend-post-2,
+  .friend-post-3,
+  .friend-post-4,
+  .friend-post-5 {
+    height: var(--height-15rem);
+  }
+}

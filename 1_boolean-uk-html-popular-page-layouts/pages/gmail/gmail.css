@@ -1,0 +1,344 @@
+:root {
+  --border-styling: 2px solid #333333;
+  --color-1: lightblue;
+  --color-2: rgb(226, 105, 105);
+  --color-3: rgb(231, 231, 97);
+  --color-4: pink;
+  --color-5: orange;
+  --color-6: rgb(189, 79, 189);
+  --color-7: grey;
+  --color-8: rgb(204, 162, 85);
+  --color-9: rgb(69, 202, 69);
+  /* heights */
+  --height-5rem: 5rem;
+  --height-10rem: 10rem;
+  --height-15rem: 15rem;
+  --height-20rem: 20rem;
+  /* item-gap */
+  --item-gap: 1em;
+}
+
+/* globally available */
+.nav {
+  border: var(--border-styling);
+  background-color: var(--color-1);
+}
+
+.nav-icons-1 {
+  border: var(--border-styling);
+  background-color: var(--color-7);
+}
+
+.nav-search {
+  border: var(--border-styling);
+  background-color: var(--color-7);
+  width: 20rem;
+  margin-left: 5rem;
+}
+
+.nav-icons-2 {
+  border: var(--border-styling);
+  background-color: var(--color-7);
+}
+
+.bar-1 {
+  border: var(--border-styling);
+  background-color: var(--color-2);
+}
+
+.bar-2 {
+  border: var(--border-styling);
+  background-color: var(--color-3);
+}
+
+.bar-3 {
+  border: var(--border-styling);
+  background-color: var(--color-4);
+}
+
+.sidebar-1 {
+  border: var(--border-styling);
+  background-color: var(--color-5);
+}
+
+.sidebar-1A {
+  border: var(--border-styling);
+  background-color: var(--color-7);
+}
+
+.sidebar-1B {
+  border: var(--border-styling);
+  background-color: var(--color-7);
+}
+
+.sidebar-1C {
+  border: var(--border-styling);
+  background-color: var(--color-7);
+}
+
+.sidebar-2 {
+  border: var(--border-styling);
+  background-color: var(--color-5);
+}
+
+.mail {
+  border: var(--border-styling);
+  background-color: var(--color-2);
+}
+
+.mail-item-1 {
+  border: var(--border-styling);
+  background-color: var(--color-9);
+}
+
+.mail-item-2 {
+  border: var(--border-styling);
+  background-color: var(--color-9);
+}
+
+.mail-item-3 {
+  border: var(--border-styling);
+  background-color: var(--color-9);
+}
+
+.mail-1 {
+  border: var(--border-styling);
+  background-color: var(--color-2);
+  height: 100vh;
+}
+
+/* mobile */
+@media only screen and (max-width: 699px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 2.2fr 0.5fr;
+    gap: 0px 0px;
+    height: 100vh;
+    grid-template-areas:
+      "nav"
+      "mail"
+      "sidebar-1";
+  }
+
+  .nav {
+    grid-area: nav;
+  }
+
+  .mail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 0.3fr) 3.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "mail-item-1"
+      "mail-item-2"
+      "mail-item-3"
+      ".";
+    grid-area: mail;
+  }
+
+  .mail-item-1 {
+    grid-area: mail-item-1;
+  }
+
+  .mail-item-2 {
+    grid-area: mail-item-2;
+  }
+
+  .mail-item-3 {
+    grid-area: mail-item-3;
+  }
+
+  .sidebar-1 {
+    grid-area: sidebar-1;
+  }
+
+  /* disable */
+  .nav-icons-1,
+  .nav-icons-2,
+  .bar-1,
+  .bar-2,
+  .bar-3,
+  .sidebar-1A,
+  .sidebar-1B,
+  .sidebar-1C,
+  .sidebar-2,
+  .mail-1 {
+    display: none;
+  }
+}
+
+/* tablet */
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+  .container {
+    display: grid;
+    grid-template-columns: 0.3fr 1.9fr 1.3fr;
+    grid-template-rows: repeat(4, 0.4fr) 1fr;
+    gap: 0px 0px;
+    height: 100vh;
+    grid-template-areas:
+      "nav nav nav"
+      "sidebar-1 mail mail-1"
+      "sidebar-1 mail mail-1"
+      "sidebar-1 mail mail-1"
+      "sidebar-1 mail mail-1";
+  }
+
+  .sidebar-1 {
+    grid-area: sidebar-1;
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "nav-search";
+    grid-area: nav;
+  }
+
+  .nav-search {
+    grid-area: nav-search;
+  }
+
+  .mail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 0.3fr) 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "mail-item-1"
+      "mail-item-2"
+      "mail-item-3"
+      ".";
+    grid-area: mail;
+  }
+
+  /* disable */
+  .nav-icons-1,
+  .nav-icons-2,
+  .bar-1,
+  .bar-2,
+  .bar-3,
+  .sidebar-1A,
+  .sidebar-1B,
+  .sidebar-1C,
+  .sidebar-2 {
+    display: none;
+  }
+}
+
+/* desktop */
+@media only screen and (min-width: 1000px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 1.5fr 0.5fr;
+    grid-template-rows: repeat(4, 0.4fr) 3.4fr;
+    gap: 0px 0px;
+    height: 100vh;
+    grid-template-areas:
+      "nav nav nav nav"
+      "sidebar-1 bar-1 bar-1 sidebar-2"
+      "sidebar-1 bar-2 bar-2 sidebar-2"
+      "sidebar-1 bar-3 bar-3 sidebar-2"
+      "sidebar-1 mail mail sidebar-2";
+  }
+
+  .nav {
+    display: grid;
+    grid-template-columns: 0.7fr 1.8fr 0.5fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "nav-icons-1 nav-search nav-icons-2";
+    grid-area: nav;
+  }
+
+  .nav-icons-1 {
+    grid-area: nav-icons-1;
+  }
+
+  .nav-search {
+    grid-area: nav-search;
+  }
+
+  .nav-icons-2 {
+    grid-area: nav-icons-2;
+  }
+
+  .bar-1 {
+    grid-area: bar-1;
+  }
+
+  .bar-2 {
+    grid-area: bar-2;
+  }
+
+  .bar-3 {
+    grid-area: bar-3;
+  }
+
+  .sidebar-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "sidebar-1A"
+      "sidebar-1B"
+      "sidebar-1C";
+    grid-area: sidebar-1;
+  }
+
+  .sidebar-1A {
+    grid-area: sidebar-1A;
+  }
+
+  .sidebar-1B {
+    grid-area: sidebar-1B;
+  }
+
+  .sidebar-1C {
+    grid-area: sidebar-1C;
+  }
+
+  .sidebar-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      "."
+      ".";
+    grid-area: sidebar-2;
+  }
+
+  .mail {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 0.3fr) 3.1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "mail-item-1"
+      "mail-item-2"
+      "mail-item-3"
+      ".";
+    grid-area: mail;
+  }
+
+  .mail-item-1 {
+    grid-area: mail-item-1;
+  }
+
+  .mail-item-2 {
+    grid-area: mail-item-2;
+  }
+
+  .mail-item-3 {
+    grid-area: mail-item-3;
+  }
+
+  .mail-1 {
+    display: none;
+  }
+}

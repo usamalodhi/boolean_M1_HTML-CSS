@@ -1,0 +1,76 @@
+/* css custom properties */
+:root {
+  --border-styling: 2px solid #333333;
+  --color-1: lightblue;
+  --color-2: rgb(226, 105, 105);
+  --color-3: rgb(231, 231, 97);
+  --color-4: pink;
+  --color-5: orange;
+  --color-6: rgb(189, 79, 189);
+  --color-7: grey;
+  --color-8: rgb(204, 162, 85);
+  --color-9: rgb(69, 202, 69);
+  /* heights */
+  --height-5rem: 5rem;
+  --height-10rem: 10rem;
+  --height-15rem: 15rem;
+  --height-20rem: 20rem;
+  /* item-gap */
+  --item-gap: 1em;
+}
+
+.nav {
+  border: var(--border-styling);
+  background-color: var(--color-1);
+}
+
+.icons {
+  border: var(--border-styling);
+  background-color: var(--color-2);
+}
+
+.features {
+  border: var(--border-styling);
+  background-color: var(--color-3);
+}
+
+.messages {
+  border: var(--border-styling);
+  background-color: var(--color-4);
+}
+
+.friends {
+  border: var(--border-styling);
+  background-color: var(--color-5);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr 2.2fr 0.8fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  height: 100vh;
+  grid-template-areas:
+    "nav nav nav nav"
+    "icons features messages friends";
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.icons {
+  grid-area: icons;
+}
+
+.features {
+  grid-area: features;
+}
+
+.messages {
+  grid-area: messages;
+}
+
+.friends {
+  grid-area: friends;
+}
